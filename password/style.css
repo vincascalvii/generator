@@ -1,0 +1,97 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+	font-family: sans-serif;
+	font-size: 16px;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #f5f5fb;
+}
+
+.top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: white;
+	width: 800px;
+	max-width: 100%;
+	padding: 30px 60px;
+	margin-top: 60px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+
+.top #password {
+	position: relative;
+	overflow: hidden;
+	white-space: nowrap;
+	font-size: 40px;
+	font-weight: 500;
+	letter-spacing: 5px;
+	padding-right: 20px;
+	flex: 1;
+}
+
+.top #password:after {
+	position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(270deg,#fff 10px,hsla(0,0%,100%,0));
+    pointer-events: none;
+    content: "";
+    z-index: 1;
+}
+
+.top .flex {
+	display: flex;
+	align-items: center;
+	width: 80px;
+}
+
+.top .flex .icon {
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+	cursor: pointer;
+	transition: .2s ease-in-out;
+}
+
+.top .flex .icon * {
+	stroke: #727272;
+}
+
+.top .flex .icon:hover * {
+	stroke: #4b85ff;
+}
+
+.bot {
+	background-color: white;
+	width: 600px;
+	max-width: 100%;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}

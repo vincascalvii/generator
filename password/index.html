@@ -1,9 +1,83 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Test</title>
+	<title>Password Generator</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<p>Test</p>
+	
+	<div class="top">
+		<div id="password"></div>
+		<div class="flex">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" id="copy" class="icon">
+				<path d="M6 11C6 8.17157 6 6.75736 6.87868 5.87868C7.75736 5 9.17157 5 12 5H15C17.8284 5 19.2426 5 20.1213 5.87868C21 6.75736 21 8.17157 21 11V16C21 18.8284 21 20.2426 20.1213 21.1213C19.2426 22 17.8284 22 15 22H12C9.17157 22 7.75736 22 6.87868 21.1213C6 20.2426 6 18.8284 6 16V11Z" stroke-width="1"/>
+				<path d="M6 19C4.34315 19 3 17.6569 3 16V10C3 6.22876 3 4.34315 4.17157 3.17157C5.34315 2 7.22876 2 11 2H15C16.6569 2 18 3.34315 18 5" stroke-width="1"/>
+			</svg>
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21"  id="reset" class="icon">
+				<g fill="none" fill-rule="evenodd" 
+				   stroke-linecap="round" stroke-linejoin="round" 
+				   transform="matrix(0 1 1 0 2.5 2.5)">
+					<path d="m3.98652376 1.07807068c-2.38377179 1.38514556-3.98652376 3.96636605-3.98652376 6.92192932 0 4.418278 3.581722 8 8 8s8-3.581722 8-8-3.581722-8-8-8"/>
+					<path d="m4 1v4h-4" transform="matrix(1 0 0 -1 0 6)"/>
+				</g>
+			</svg>
+		</div>
+	</div>
+
+	<div class="bot">
+		<div>Password Length</div>
+		<div>
+			<input type="number" name="length" id="length" class="" min="0" max="100" step="1" value="12">
+			<div>
+				
+			</div>
+		</div>
+		<div>Include:</div>
+		<div>
+			<div>
+				<input type="checkbox" name="uppercase" id="inc_uppercase" checked="checked">
+				<label for="inc_uppercase">Uppercase</label>
+			</div>
+			<div>
+				<input type="checkbox" name="lowercase" id="inc_lowercase" checked="checked">
+				<label for="inc_lowercase">Lowercase</label>
+			</div>
+			<div>
+				<input type="checkbox" name="numbers" id="inc_numbers" checked="checked">
+				<label for="inc_numbers">Numbers</label>
+			</div>
+			<div>
+				<input type="checkbox" name="symbols" id="inc_symbols" checked="checked">
+				<label for="inc_symbols">Symbols</label>
+			</div>
+		</div>
+		<div>Exclude:</div>
+		<div>
+			<div>
+				<input type="checkbox" name="similar" id="exc_similar" checked="checked">
+				<label for="exc_similar">
+					Similar Characters
+					<span>
+						<span>i, l, 1, L, o, 0, O</span>
+					</span>
+				</label>
+			</div>
+			<div>
+				<input type="checkbox" name="ambiguous" id="exc_ambiguous" checked="checked">
+				<label for="exc_ambiguous">
+					Ambiguous Characters
+					<span>
+						<span>{ } [ ] ( ) / \ ' " ` ~ , ; : . &lt; &gt;</span>
+					</span>
+				</label>
+			</div>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+
 </body>
 </html>
